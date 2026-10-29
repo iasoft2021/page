@@ -1,352 +1,117 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html lang="ko">
 <head>
-    <meta charset="utf-8" />
-    <title>Privacy Policy</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>도깨비씽 - AI 보컬제거·MR만들기 노래연습</title>
+<meta name="description" content="내 폰 노래에서 AI로 목소리만 쏙! 서버 업로드 없이 MR 만들고 노래연습·녹음까지. Dokebising: AI vocal remover on your phone.">
+<link rel="canonical" href="https://dokebimaster.com/">
+<link rel="icon" href="img/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="도깨비씽 Dokebising">
+<meta property="og:title" content="도깨비씽 - AI 보컬제거·MR만들기 노래연습">
+<meta property="og:description" content="내 폰 노래에서 AI로 목소리만 쏙! 서버 업로드 없이 MR 만들고 노래연습·녹음까지">
+<meta property="og:image" content="https://dokebimaster.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://dokebimaster.com/">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://dokebimaster.com/og.png">
+<meta name="google-play-app" content="app-id=com.dokebimaster.dokebising">
+<style>
+:root{--bg:#17122b;--bg2:#211a3c;--card:#251d42;--line:#3a3058;--text:#f3effa;--muted:#b9b0cf;--pink:#ff5c8a;--pink2:#ff8db0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Noto Sans KR","Noto Sans JP","Noto Sans SC","Noto Sans Arabic","Noto Sans Devanagari","Noto Sans Thai",sans-serif;
+ background:radial-gradient(900px 600px at 85% -10%,rgba(110,80,220,.38),transparent 70%),radial-gradient(800px 600px at 0% 45%,rgba(255,92,138,.15),transparent 70%),var(--bg);
+ color:var(--text);line-height:1.6;font-size:16px;word-break:keep-all;overflow-wrap:anywhere}
+a{color:var(--pink2)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:22px 0}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:20px;color:var(--text);text-decoration:none}
+.brand img{width:44px;height:44px;border-radius:12px}
+.lang{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:14px}
+select{background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:8px 10px;font-size:15px;max-width:55vw}
+.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:32px;align-items:center;padding:36px 0 28px}
+.hero h1{font-size:clamp(30px,5vw,52px);line-height:1.18;font-weight:800;letter-spacing:-.01em}
+.hero h1 b{color:var(--pink)}
+.hero p{color:var(--muted);font-size:clamp(17px,2.1vw,20px);margin-top:16px;max-width:34em}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:17px;text-decoration:none;padding:14px 26px;border-radius:999px}
+.btn.play{background:var(--pink);color:#fff;box-shadow:0 10px 30px rgba(255,92,138,.35)}
+.btn.play svg{width:22px;height:22px}
+.btn.guide{background:var(--card);color:var(--text);border:1px solid var(--line)}
+.btn:hover{filter:brightness(1.08)}
+.char{width:100%;max-width:400px;justify-self:center;
+ -webkit-mask-image:radial-gradient(closest-side,#000 70%,transparent 100%);mask-image:radial-gradient(closest-side,#000 70%,transparent 100%)}
+.feats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:20px 0 40px}
+.feat{background:linear-gradient(180deg,var(--card),var(--bg2));border:1px solid var(--line);border-radius:24px;padding:20px 16px 0;text-align:center;overflow:hidden;display:flex;flex-direction:column}
+.feat h3{font-size:18px;line-height:1.35;min-height:2.7em;display:flex;align-items:center;justify-content:center}
+.feat img{width:86%;margin:16px auto 0;display:block;border-radius:22px 22px 0 0;border:5px solid #0d0b14;border-bottom:0;box-shadow:0 0 0 2px var(--line)}
+.cta{text-align:center;padding:10px 0 30px}
+footer{color:var(--muted);font-size:14px;padding:24px 0 44px;text-align:center;border-top:1px solid var(--line)}
+footer a{margin:0 6px}
+@media (max-width:860px){.feats{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){
+ .hero{grid-template-columns:1fr;text-align:center;padding-top:8px}.hero p{margin-inline:auto}
+ .char{max-width:230px;order:-1}.btns{justify-content:center}
+ .feats{gap:12px}.feat{padding:14px 10px 0}.feat h3{font-size:15px}
+}
+</style>
 </head>
 <body>
-    <h1>개인정보 보호정책</h1>
-    <p>
-    <p>
-        < 아이에이 >('아이에이'이하 'IA')은(는) 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리방침을 수립·공개합니다.
-    </p>
-
-    <p>
-        ○ 이 개인정보처리방침은 2023년 1월 1부터 적용됩니다.
-    </p>
-
-    <p>
-        제1조(개인정보의 처리 목적)
-    </p>
-
-    <p>
-        < 아이에이 >('아이에이'이하 'IA')은(는) 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며 이용 목적이 변경되는 경우에는 「개인정보 보호법」 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.
-    </p>
-
-    <p>
-        1. 재화 또는 서비스 제공
-    </p>
-
-    <p>
-        콘텐츠 제공을 목적으로 개인정보를 처리합니다.
-    </p>
-
-    <p>
-        제2조(개인정보의 처리 및 보유 기간)
-    </p>
-
-    <p>
-        ① < 아이에이 >은(는) 법령에 따른 개인정보 보유·이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의받은 개인정보 보유·이용기간 내에서 개인정보를 처리·보유합니다.
-    </p>
-
-    <p>
-        ② 별도의 개인 정보(이메일, 이름, 성별등)를 요구하지 않습니다.
-    </p>
-
-    <p>
-        제3조(처리하는 개인정보의 항목)
-    </p>
-
-    <p>
-        ① < 아이에이 >은(는) 다음의 개인정보 항목을 처리하고 있습니다.
-    </p>
-
-    <p>
-        1< 재화 또는 서비스 제공 >
-    </p>
-
-    <p>
-        필수항목 : 서비스 이용 기록
-    </p>
-
-    <p>
-        제4조(개인정보의 제3자 제공에 관한 사항)
-    </p>
-
-    <p>
-        ① < 아이에이 >은(는) 개인정보를 제3자에게 제공하지 않습니다.
-    </p>
-
-    <p>
-
-        제5조(개인정보처리의 위탁에 관한 사항)
-    </p>
-
-    <p>
-        ① < 아이에이 >은(는) 개인정보 처리를 위해 위탁업무무를 하고 있지 않으며, 위탁업무의 내용이나 수탁자가 변경될 경우에는 지체없이 본 개인정보 처리방침을 통하여 공개하도록 하겠습니다.
-    </p>
-
-    <p>
-
-        제6조(개인정보의 파기절차 및 파기방법)
-    </p>
-
-    <p>
-        ① < 아이에이 > 은(는) 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체없이 해당 개인정보를 파기합니다.
-    </p>
-
-    <p>
-        ② 정보주체로부터 동의받은 개인정보 보유기간이 경과하거나 처리목적이 달성되었음에도 불구하고 다른 법령에 따라 개인정보를 계속 보존하여야 하는 경우에는, 해당 개인정보를 별도의 데이터베이스(DB)로 옮기거나 보관장소를 달리하여 보존합니다.
-    </p>
-
-    <p>
-        ③ 개인정보 파기의 절차 및 방법은 다음과 같습니다.
-    </p>
-
-    <p>
-        1. 파기절차
-    </p>
-
-    <p>
-        < 아이에이 > 은(는) 파기 사유가 발생한 개인정보를 선정하고, < 아이에이 > 의 개인정보 보호책임자의 승인을 받아 개인정보를 파기합니다.
-    </p>
-
-    <p>
-        2. 파기방법
-    </p>
-
-    <p>
-        종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통하여 파기합니다.
-    </p>
-
-    <p>
-        전자적 파일 형태의 정보는 기록을 재생할 수 없는 기술적 방법을 사용합니다
-    </p>
-
-    <p>
-
-        제7조(정보주체와 법정대리인의 권리·의무 및 그 행사방법에 관한 사항)
-    </p>
-
-    <p>
-        ① 정보주체는 아이에이에 대해 언제든지 개인정보 열람·정정·삭제·처리정지 요구 등의 권리를 행사할 수 있습니다.
-    </p>
-
-    <p>
-        ② 제1항에 따른 권리 행사는아이에이에 대해 「개인정보 보호법」 시행령 제41조제1항에 따라 서면, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며 아이에이은(는) 이에 대해 지체 없이 조치하겠습니다.
-    </p>
-
-    <p>
-        ③ 제1항에 따른 권리 행사는 정보주체의 법정대리인이나 위임을 받은 자 등 대리인을 통하여 하실 수 있습니다.이 경우 “개인정보 처리 방법에 관한 고시(제2020-7호)” 별지 제11호 서식에 따른 위임장을 제출하셔야 합니다.
-    </p>
-
-    <p>
-        ④ 개인정보 열람 및 처리정지 요구는 「개인정보 보호법」 제35조 제4항, 제37조 제2항에 의하여 정보주체의 권리가 제한 될 수 있습니다.
-    </p>
-
-    <p>
-        ⑤ 개인정보의 정정 및 삭제 요구는 다른 법령에서 그 개인정보가 수집 대상으로 명시되어 있는 경우에는 그 삭제를 요구할 수 없습니다.
-    </p>
-
-    <p>
-        ⑥ 아이에이은(는) 정보주체 권리에 따른 열람의 요구, 정정·삭제의 요구, 처리정지의 요구 시 열람 등 요구를 한 자가 본인이거나 정당한 대리인인지를 확인합니다.
-    </p>
-
-    <p>
-        제8조(개인정보의 안전성 확보조치에 관한 사항)
-    </p>
-
-    <p>
-        < 아이에이 >은(는) 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.
-    </p>
-
-    <p>
-        1. 개인정보 취급 직원의 최소화 및 교육
-    </p>
-
-    <p>
-        개인정보를 취급하는 직원을 지정하고 담당자에 한정시켜 최소화 하여 개인정보를 관리하는 대책을 시행하고 있습니다.
-    </p>
-
-    <p>
-        2. 정기적인 자체 감사 실시
-    </p>
-
-    <p>
-        개인정보 취급 관련 안정성 확보를 위해 정기적(분기 1회)으로 자체 감사를 실시하고 있습니다.
-    </p>
-
-    <p>
-        3. 개인정보에 대한 접근 제한
-    </p>
-
-    <p>
-        개인정보를 처리하는 데이터베이스시스템에 대한 접근권한의 부여,변경,말소를 통하여 개인정보에 대한 접근통제를 위하여 필요한 조치를 하고 있으며 침입차단시스템을 이용하여 외부로부터의 무단 접근을 통제하고 있습니다.
-    </p>
-
-    <p>
-
-        제9조(개인정보를 자동으로 수집하는 장치의 설치·운영 및 그 거부에 관한 사항)
-    </p>
-
-    <p>
-        아이에이 은(는) 정보주체의 이용정보를 저장하고 수시로 불러오는 ‘쿠키(cookie)’를 사용하지 않습니다.
-    </p>
-
-    <p>
-
-        제10조(행태정보의 수집·이용·제공 및 거부 등에 관한 사항)
-    </p>
-
-    <p>
-        행태정보의 수집·이용·제공 및 거부등에 관한 사항
-    </p>
-
-    <p>
-        <아이에이>은(는) 온라인 맞춤형 광고 등을 위한 행태정보를 수집·이용·제공하지 않습니다.
-    </p>
-
-    <p>
-        제11조(추가적인 이용·제공 판단기준)
-    </p>
-
-    <p>
-        < 아이에이 > 은(는) ｢개인정보 보호법｣ 제15조제3항 및 제17조제4항에 따라 ｢개인정보 보호법 시행령｣ 제14조의2에 따른 사항을 고려하여 정보주체의 동의 없이 개인정보를 추가적으로 이용·제공할 수 있습니다. 이에 따라 < 아이에이 > 가(이) 정보주체의 동의 없이 추가적인 이용·제공을 하기 위해서 다음과 같은 사항을 고려하였습니다.
-    </p>
-
-    <p>
-        ▶ 개인정보를 추가적으로 이용·제공하려는 목적이 당초 수집 목적과 관련성이 있는지 여부
-    </p>
-
-    <p>
-        ▶ 개인정보를 수집한 정황 또는 처리 관행에 비추어 볼 때 추가적인 이용·제공에 대한 예측 가능성이 있는지 여부
-    </p>
-
-    <p>
-        ▶ 개인정보의 추가적인 이용·제공이 정보주체의 이익을 부당하게 침해하는지 여부
-    </p>
-
-    <p>
-        ▶ 가명처리 또는 암호화 등 안전성 확보에 필요한 조치를 하였는지 여부
-    </p>
-
-    <p>
-        ※ 추가적인 이용·제공 시 고려사항에 대한 판단기준은 사업자/단체 스스로 자율적으로 판단하여 작성·공개함
-    </p>
-
-    <p>
-        제12조(가명정보를 처리하는 경우 가명정보 처리에 관한 사항)
-    </p>
-
-    <p>
-        < 아이에이 > 은(는) 가명정보를 처리하고 있지 않습니다. 변경시 지체없이 본 개인정보 처리방침을 통하여 공개하도록 하겠습니다.
-    </p>
-
-    <p>
-        제13조 (개인정보 보호책임자에 관한 사항)
-    </p>
-
-    <p>
-        ① 아이에이 은(는) 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.
-    </p>
-
-    <p>
-        ▶ 개인정보 보호책임자
-    </p>
-
-    <p>
-        성명 :금종룡
-    </p>
-
-    <p>
-        직책 :대표
-    </p>
-
-    <p>
-        직급 :대표
-    </p>
-
-    <p>
-        연락처 : master@dokebimaster.com
-    </p>
-
-    <p>
-
-        ② 정보주체께서는 아이에이 의 서비스(또는 사업)을 이용하시면서 발생한 모든 개인정보 보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을 개인정보 보호책임자 및 담당부서로 문의하실 수 있습니다. 아이에이 은(는) 정보주체의 문의에 대해 지체 없이 답변 및 처리해드릴 것입니다.
-    </p>
-
-    <p>
-        제14조(국내대리인의 지정)
-    </p>
-
-    <p>
-        정보주체는 ｢개인정보 보호법｣ 제39조의11에 따라 지정된 < 아이에이 >의 국내대리인에게 개인정보 관련 고충처리 등의 업무를 위하여 연락을 취할 수 있습니다. < 아이에이 >은(는) 정보주체의 개인정보 관련 고충처리 등 개인정보 보호책임자의 업무 등을 신속하게 처리할 수 있도록 노력하겠습니다.
-    </p>
-
-    <p>
-        ▶ < 아이에이 > 은(는) 대리인이 없습니다.
-    </p>
-
-    <p>
-        제15조(개인정보의 열람청구를 접수·처리하는 부서)
-    </p>
-
-    <p>
-        정보주체는 ｢개인정보 보호법｣ 제35조에 따른 개인정보의 열람 청구를 아래의 부서에 할 수 있습니다.
-    </p>
-
-    <p>
-        < 아이에이 >은(는) 정보주체의 개인정보 열람청구가 신속하게 처리되도록 노력하겠습니다.
-    </p>
-
-    <p>
-
-        ▶ 개인정보 열람청구 접수·처리 부서
-    </p>
-
-    <p>
-        부서명 : 대표
-    </p>
-
-    <p>
-        담당자 :금종룡
-    </p>
-
-    <p>
-        연락처 :master@dokebimaster.com
-    </p>
-
-    <p>
-
-        제16조(정보주체의 권익침해에 대한 구제방법)
-    </p>
-
-    <p>
-        정보주체는 개인정보침해로 인한 구제를 받기 위하여 개인정보분쟁조정위원회, 한국인터넷진흥원 개인정보침해신고센터 등에 분쟁해결이나 상담 등을 신청할 수 있습니다. 이 밖에 기타 개인정보침해의 신고, 상담에 대하여는 아래의 기관에 문의하시기 바랍니다.
-    </p>
-
-    <p>
-        1. 개인정보분쟁조정위원회 : (국번없이) 1833-6972 (www.kopico.go.kr)
-    </p>
-
-    <p>
-        2. 개인정보침해신고센터 : (국번없이) 118 (privacy.kisa.or.kr)
-    </p>
-
-    <p>
-        3. 대검찰청 : (국번없이) 1301 (www.spo.go.kr)
-    </p>
-
-    <p>
-        4. 경찰청 : (국번없이) 182 (ecrm.cyber.go.kr)
-    </p>
-
-    <p>
-
-        「개인정보보호법」제35조(개인정보의 열람), 제36조(개인정보의 정정·삭제), 제37조(개인정보의 처리정지 등)의 규정에 의한 요구에 대 하여 공공기관의 장이 행한 처분 또는 부작위로 인하여 권리 또는 이익의 침해를 받은 자는 행정심판법이 정하는 바에 따라 행정심판을 청구할 수 있습니다.
-    </p>
-
-    <p>
-        ※ 행정심판에 대해 자세한 사항은 중앙행정심판위원회(www.simpan.go.kr) 홈페이지를 참고하시기 바랍니다.
-    </p>
-
-    <p>
-        제18조(개인정보 처리방침 변경)
-    </p>
-
-    <p>
-        ① 이 개인정보처리방침은 2023년 1월 1부터 적용됩니다.
-    </p>
+<div class="wrap">
+ <div class="top">
+  <a class="brand" href="./"><img src="img/icon.png" alt=""><span id="brand">Dokebising</span></a>
+  <label class="lang"><span id="langLabel">Language</span><select id="lang" aria-label="Language"></select></label>
+ </div>
+ <div class="hero">
+  <div>
+   <h1 id="title">도깨비씽: AI 보컬제거·MR만들기 노래연습</h1>
+   <p id="short">내 폰 노래에서 AI로 목소리만 쏙! 서버 업로드 없이 MR 만들고 노래연습·녹음·점수까지</p>
+   <div class="btns">
+    <a class="btn play" id="playBtn" href="https://play.google.com/store/apps/details?id=com.dokebimaster.dokebising" target="_blank" rel="noopener">
+     <svg viewBox="0 0 24 24" fill="#fff"><path d="M4 2.8v18.4c0 .6.7 1 1.2.7L21 12.7c.5-.3.5-1.1 0-1.4L5.2 2.1C4.7 1.8 4 2.2 4 2.8z"/></svg>Google Play</a>
+    <a class="btn guide" id="guideBtn" href="guide/">📖 <span id="guideTxt">도깨비씽 사용 설명서</span></a>
+   </div>
+  </div>
+  <img class="char" src="img/dokkaebi.jpg" alt="Dokebising">
+ </div>
+ <div class="feats" id="feats"></div>
+ <footer id="footer"></footer>
+</div>
+<script>
+const DATA={"ko-KR": {"name": "한국어", "sel": "언어", "guide": "도깨비씽 사용 설명서", "privacy": "개인정보처리방침", "title": "도깨비씽: AI 보컬제거·MR만들기 노래연습", "short": "내 폰 노래에서 AI로 목소리만 쏙! 서버 업로드 없이 MR 만들고 노래연습·녹음·점수까지", "feats": [["내 폰 노래, 목소리만 쏙!", "guide/img/ko-KR/04_play.jpg"], ["가사 보며 반주에 맞춰 노래", "guide/img/ko-KR/05_playing.jpg"], ["업로드 없이 폰에서 AI 처리", "guide/img/ko-KR/02_allsongs.jpg"], ["녹음하고 저장까지 한 번에", "guide/img/ko-KR/07_export.jpg"]], "rtl": false}, "en-US": {"name": "English", "sel": "Language", "guide": "Dokebising User Guide", "privacy": "Privacy Policy", "title": "Dokebising: AI Vocal Remover", "short": "Remove vocals from your own songs with on-device AI. Sing, record & get scored.", "feats": [["Remove vocals from any song", "guide/img/en-US/04_play.jpg"], ["Sing along with the lyrics", "guide/img/en-US/05_playing.jpg"], ["On-device AI. No uploads.", "guide/img/en-US/02_allsongs.jpg"], ["Record & save your cover", "guide/img/en-US/07_export.jpg"]], "rtl": false}, "ja-JP": {"name": "日本語", "sel": "言語", "guide": "Dokebising 使い方ガイド", "privacy": "プライバシーポリシー", "title": "Dokebising: AIボーカル除去・カラオケ", "short": "スマホの曲からAIで歌声だけを消去！アップロード不要で伴奏作成・歌の練習・録音・採点", "feats": [["スマホの曲から 歌声だけを消去", "guide/img/ja-JP/04_play.jpg"], ["歌詞を見ながら 伴奏で歌おう", "guide/img/ja-JP/05_playing.jpg"], ["アップロード不要 端末内でAI処理", "guide/img/ja-JP/02_allsongs.jpg"], ["録音から保存まで これひとつ", "guide/img/ja-JP/07_export.jpg"]], "rtl": false}, "zh-CN": {"name": "简体中文", "sel": "语言", "guide": "Dokebising 使用指南", "privacy": "隐私政策", "title": "Dokebising: AI人声消除·伴奏制作", "short": "用AI一键消除手机歌曲中的人声！无需上传，制作伴奏、练歌、录音、打分一站搞定", "feats": [["一键消除歌曲人声", "guide/img/zh-CN/04_play.jpg"], ["看着歌词跟伴奏唱", "guide/img/zh-CN/05_playing.jpg"], ["无需上传 手机本地AI处理", "guide/img/zh-CN/02_allsongs.jpg"], ["录音、保存一步到位", "guide/img/zh-CN/07_export.jpg"]], "rtl": false}, "zh-TW": {"name": "繁體中文", "sel": "語言", "guide": "Dokebising 使用說明", "privacy": "隱私權政策", "title": "Dokebising: AI人聲消除・伴奏製作", "short": "用AI一鍵消除手機歌曲中的人聲！無需上傳，製作伴奏、練歌、錄音、評分一次搞定", "feats": [["一鍵消除歌曲人聲", "guide/img/zh-TW/04_play.jpg"], ["看著歌詞跟伴奏唱", "guide/img/zh-TW/05_playing.jpg"], ["無需上傳 手機本機AI處理", "guide/img/zh-TW/02_allsongs.jpg"], ["錄音、儲存一次完成", "guide/img/zh-TW/07_export.jpg"]], "rtl": false}, "es-ES": {"name": "Español", "sel": "Idioma", "guide": "Guía de uso de Dokebising", "privacy": "Política de privacidad", "title": "Dokebising: Quitar voz karaoke", "short": "Quita la voz de tus canciones con IA en el móvil. Canta, graba y puntúate.", "feats": [["Quita la voz de cualquier canción", "guide/img/es-ES/04_play.jpg"], ["Canta siguiendo la letra", "guide/img/es-ES/05_playing.jpg"], ["IA en tu móvil, sin subir nada", "guide/img/es-ES/02_allsongs.jpg"], ["Graba y guarda tu versión", "guide/img/es-ES/07_export.jpg"]], "rtl": false}, "pt-BR": {"name": "Português (Brasil)", "sel": "Idioma", "guide": "Guia do Dokebising", "privacy": "Política de Privacidade", "title": "Dokebising: Remover voz com IA", "short": "Remova a voz das suas músicas com IA no celular. Cante, grave e receba sua nota.", "feats": [["Remova a voz de qualquer música", "guide/img/pt-BR/04_play.jpg"], ["Cante acompanhando a letra", "guide/img/pt-BR/05_playing.jpg"], ["IA no celular, sem uploads", "guide/img/pt-BR/02_allsongs.jpg"], ["Grave e salve sua versão", "guide/img/pt-BR/07_export.jpg"]], "rtl": false}, "pt-PT": {"name": "Português (Portugal)", "sel": "Idioma", "guide": "Guia do Dokebising", "privacy": "Política de Privacidade", "title": "Dokebising: Remover voz com IA", "short": "Remova a voz das músicas com IA no telemóvel. Cante, grave e veja a pontuação.", "feats": [["Remova a voz de qualquer música", "guide/img/pt-BR/04_play.jpg"], ["Cante a acompanhar a letra", "guide/img/pt-BR/05_playing.jpg"], ["IA no telemóvel, sem carregamentos", "guide/img/pt-BR/02_allsongs.jpg"], ["Grave e guarde a sua versão", "guide/img/pt-BR/07_export.jpg"]], "rtl": false}, "fr-FR": {"name": "Français", "sel": "Langue", "guide": "Guide d'utilisation de Dokebising", "privacy": "Politique de confidentialité", "title": "Dokebising: Retirer la voix IA", "short": "Retirez la voix de vos chansons avec l'IA. Chantez, enregistrez, notez-vous.", "feats": [["Retirez la voix de vos chansons", "guide/img/fr-FR/04_play.jpg"], ["Chantez avec les paroles", "guide/img/fr-FR/05_playing.jpg"], ["IA sur l'appareil, sans envoi", "guide/img/fr-FR/02_allsongs.jpg"], ["Enregistrez et sauvegardez", "guide/img/fr-FR/07_export.jpg"]], "rtl": false}, "de-DE": {"name": "Deutsch", "sel": "Sprache", "guide": "Dokebising Anleitung", "privacy": "Datenschutzerklärung", "title": "Dokebising: Gesang entfernen", "short": "Entferne per KI den Gesang aus deinen Songs am Handy. Singen, aufnehmen, Punkte.", "feats": [["Gesang aus jedem Song entfernen", "guide/img/de-DE/04_play.jpg"], ["Mit Songtext mitsingen", "guide/img/de-DE/05_playing.jpg"], ["KI auf dem Handy – ohne Upload", "guide/img/de-DE/02_allsongs.jpg"], ["Aufnehmen und speichern", "guide/img/de-DE/07_export.jpg"]], "rtl": false}, "it-IT": {"name": "Italiano", "sel": "Lingua", "guide": "Guida di Dokebising", "privacy": "Informativa sulla privacy", "title": "Dokebising: Togli voce con IA", "short": "Togli la voce dalle canzoni con l'IA sul telefono. Canta, registra e valutati.", "feats": [["Togli la voce da ogni canzone", "guide/img/it-IT/04_play.jpg"], ["Canta seguendo il testo", "guide/img/it-IT/05_playing.jpg"], ["IA sul telefono, nessun upload", "guide/img/it-IT/02_allsongs.jpg"], ["Registra e salva la tua cover", "guide/img/it-IT/07_export.jpg"]], "rtl": false}, "nl-NL": {"name": "Nederlands", "sel": "Taal", "guide": "Handleiding Dokebising", "privacy": "Privacybeleid", "title": "Dokebising: Zang verwijderen", "short": "Haal met AI de zang uit je nummers. Zing mee, neem op en krijg een score.", "feats": [["Haal de zang uit elk nummer", "guide/img/nl-NL/04_play.jpg"], ["Zing mee met de songtekst", "guide/img/nl-NL/05_playing.jpg"], ["AI op je telefoon, geen upload", "guide/img/nl-NL/02_allsongs.jpg"], ["Opnemen en opslaan", "guide/img/nl-NL/07_export.jpg"]], "rtl": false}, "ru-RU": {"name": "Русский", "sel": "Язык", "guide": "Руководство Dokebising", "privacy": "Политика конфиденциальности", "title": "Dokebising: удаление голоса ИИ", "short": "Уберите голос из песен с ИИ на телефоне. Пойте, записывайте, получайте оценку.", "feats": [["Уберите голос из любой песни", "guide/img/ru-RU/04_play.jpg"], ["Пойте по тексту песни", "guide/img/ru-RU/05_playing.jpg"], ["ИИ на телефоне, без загрузки", "guide/img/ru-RU/02_allsongs.jpg"], ["Записывайте и сохраняйте", "guide/img/ru-RU/07_export.jpg"]], "rtl": false}, "id": {"name": "Bahasa Indonesia", "sel": "Bahasa", "guide": "Panduan Dokebising", "privacy": "Kebijakan Privasi", "title": "Dokebising: Hapus Vokal AI", "short": "Hapus vokal dari lagumu dengan AI langsung di HP. Nyanyi, rekam & dapatkan skor.", "feats": [["Hapus vokal dari lagu apa pun", "guide/img/id/04_play.jpg"], ["Bernyanyi sambil lihat lirik", "guide/img/id/05_playing.jpg"], ["AI di HP, tanpa unggah", "guide/img/id/02_allsongs.jpg"], ["Rekam & simpan cover-mu", "guide/img/id/07_export.jpg"]], "rtl": false}, "ms": {"name": "Bahasa Melayu", "sel": "Bahasa", "guide": "Panduan Dokebising", "privacy": "Dasar Privasi", "title": "Dokebising: Buang Vokal AI", "short": "Buang vokal daripada lagu anda dengan AI di telefon. Nyanyi, rakam & dapat skor.", "feats": [["Buang vokal daripada sebarang lagu", "guide/img/ms/04_play.jpg"], ["Nyanyi sambil lihat lirik", "guide/img/ms/05_playing.jpg"], ["AI dalam telefon, tanpa muat naik", "guide/img/ms/02_allsongs.jpg"], ["Rakam & simpan nyanyian anda", "guide/img/ms/07_export.jpg"]], "rtl": false}, "ms-MY": {"name": "Bahasa Melayu (Malaysia)", "sel": "Bahasa", "guide": "Panduan Dokebising", "privacy": "Dasar Privasi", "title": "Dokebising: Buang Vokal AI", "short": "Buang vokal daripada lagu anda dengan AI di telefon. Nyanyi, rakam & dapat skor.", "feats": [["Buang vokal daripada sebarang lagu", "guide/img/ms/04_play.jpg"], ["Nyanyi sambil lihat lirik", "guide/img/ms/05_playing.jpg"], ["AI dalam telefon, tanpa muat naik", "guide/img/ms/02_allsongs.jpg"], ["Rakam & simpan nyanyian anda", "guide/img/ms/07_export.jpg"]], "rtl": false}, "fil": {"name": "Filipino", "sel": "Wika", "guide": "Gabay sa Dokebising", "privacy": "Patakaran sa Privacy", "title": "Dokebising: AI Vocal Remover", "short": "Alisin ang boses sa kanta gamit ang AI sa phone. Kumanta, mag-record, may score.", "feats": [["Alisin ang boses sa kahit anong kanta", "guide/img/fil/04_play.jpg"], ["Kumanta habang may lyrics", "guide/img/fil/05_playing.jpg"], ["AI sa phone mo, walang upload", "guide/img/fil/02_allsongs.jpg"], ["I-record at i-save ang cover mo", "guide/img/fil/07_export.jpg"]], "rtl": false}, "vi": {"name": "Tiếng Việt", "sel": "Ngôn ngữ", "guide": "Hướng dẫn sử dụng Dokebising", "privacy": "Chính sách quyền riêng tư", "title": "Dokebising: Tách giọng hát AI", "short": "Xóa giọng hát khỏi bài hát bằng AI ngay trên điện thoại. Hát, thu âm, chấm điểm.", "feats": [["Tách giọng hát khỏi mọi bài hát", "guide/img/vi/04_play.jpg"], ["Hát theo lời bài hát", "guide/img/vi/05_playing.jpg"], ["AI trên máy, không cần tải lên", "guide/img/vi/02_allsongs.jpg"], ["Thu âm và lưu bản cover", "guide/img/vi/07_export.jpg"]], "rtl": false}, "th": {"name": "ไทย", "sel": "ภาษา", "guide": "คู่มือการใช้งาน Dokebising", "privacy": "นโยบายความเป็นส่วนตัว", "title": "Dokebising: AI ลบเสียงร้อง", "short": "ลบเสียงร้องออกจากเพลงของคุณด้วย AI บนมือถือ ร้อง อัดเสียง และดูคะแนนได้เลย", "feats": [["ลบเสียงร้อง ออกจากทุกเพลง", "guide/img/th/04_play.jpg"], ["ร้องตามเนื้อเพลง", "guide/img/th/05_playing.jpg"], ["AI บนเครื่อง ไม่ต้องอัปโหลด", "guide/img/th/02_allsongs.jpg"], ["อัดเสียงและบันทึกในที่เดียว", "guide/img/th/07_export.jpg"]], "rtl": false}, "tr-TR": {"name": "Türkçe", "sel": "Dil", "guide": "Dokebising Kullanım Kılavuzu", "privacy": "Gizlilik Politikası", "title": "Dokebising: YZ ile Vokal Silme", "short": "Şarkılarındaki vokali telefonda yapay zekayla sil. Söyle, kaydet, puanını gör.", "feats": [["Her şarkıdan vokali kaldır", "guide/img/tr-TR/04_play.jpg"], ["Sözlerle birlikte söyle", "guide/img/tr-TR/05_playing.jpg"], ["Telefonda yapay zeka, yükleme yok", "guide/img/tr-TR/02_allsongs.jpg"], ["Kaydet ve sakla", "guide/img/tr-TR/07_export.jpg"]], "rtl": false}, "ar": {"name": "العربية", "sel": "اللغة", "guide": "دليل استخدام Dokebising", "privacy": "سياسة الخصوصية", "title": "Dokebising: إزالة صوت المغني", "short": "أزل صوت المغني من أغانيك بالذكاء الاصطناعي على هاتفك. غنِّ وسجّل وقيّم أداءك.", "feats": [["أزل صوت المغني من أي أغنية", "guide/img/ar/04_play.jpg"], ["غنِّ مع كلمات الأغنية", "guide/img/ar/05_playing.jpg"], ["ذكاء اصطناعي على هاتفك دون رفع", "guide/img/ar/02_allsongs.jpg"], ["سجّل أداءك واحفظه", "guide/img/ar/07_export.jpg"]], "rtl": true}, "fa": {"name": "فارسی", "sel": "زبان", "guide": "راهنمای Dokebising", "privacy": "سیاست حفظ حریم خصوصی", "title": "Dokebising: حذف صدای خواننده", "short": "حذف صدای خواننده با هوش مصنوعی روی گوشی. بخوانید، ضبط کنید، امتیاز بگیرید.", "feats": [["صدای خواننده را از هر آهنگی حذف کنید", "guide/img/fa/04_play.jpg"], ["همراه با متن ترانه بخوانید", "guide/img/fa/05_playing.jpg"], ["هوش مصنوعی روی گوشی، بدون آپلود", "guide/img/fa/02_allsongs.jpg"], ["ضبط و ذخیره در یک جا", "guide/img/fa/07_export.jpg"]], "rtl": true}, "hi-IN": {"name": "हिन्दी", "sel": "भाषा", "guide": "Dokebising उपयोग गाइड", "privacy": "गोपनीयता नीति", "title": "Dokebising: AI वोकल रिमूवर", "short": "अपने गानों से AI द्वारा फ़ोन पर आवाज़ हटाएँ। गाएँ, रिकॉर्ड करें, स्कोर पाएँ।", "feats": [["किसी भी गाने से आवाज़ हटाएँ", "guide/img/hi-IN/04_play.jpg"], ["बोल देखकर साथ गाएँ", "guide/img/hi-IN/05_playing.jpg"], ["फ़ोन पर AI, कोई अपलोड नहीं", "guide/img/hi-IN/02_allsongs.jpg"], ["रिकॉर्ड करें और सेव करें", "guide/img/hi-IN/07_export.jpg"]], "rtl": false}, "ne-NP": {"name": "नेपाली", "sel": "भाषा", "guide": "Dokebising प्रयोग निर्देशिका", "privacy": "गोपनीयता नीति", "title": "Dokebising: AI भोकल रिमुभर", "short": "गीतबाट AI ले फोनमै स्वर हटाउनुहोस्। गाउनुहोस्, रेकर्ड गर्नुहोस्, स्कोर पाउनुस्।", "feats": [["जुनसुकै गीतबाट स्वर हटाउनुहोस्", "guide/img/ne-NP/04_play.jpg"], ["शब्द हेर्दै सँगै गाउनुहोस्", "guide/img/ne-NP/05_playing.jpg"], ["फोनमै AI, अपलोड चाहिँदैन", "guide/img/ne-NP/02_allsongs.jpg"], ["रेकर्ड र सेभ एकै ठाउँमा", "guide/img/ne-NP/07_export.jpg"]], "rtl": false}, "ta-IN": {"name": "தமிழ்", "sel": "மொழி", "guide": "Dokebising பயனர் வழிகாட்டி", "privacy": "தனியுரிமைக் கொள்கை", "title": "Dokebising: AI குரல் நீக்கி", "short": "பாடல்களில் உள்ள குரலை AI மூலம் போனிலேயே நீக்குங்கள். பாடி, பதிவு செய்யுங்கள்.", "feats": [["எந்தப் பாடலிலும் குரலை நீக்குங்கள்", "guide/img/ta-IN/04_play.jpg"], ["வரிகளைப் பார்த்துப் பாடுங்கள்", "guide/img/ta-IN/05_playing.jpg"], ["போனிலேயே AI, பதிவேற்றம் இல்லை", "guide/img/ta-IN/02_allsongs.jpg"], ["பதிவு செய்து சேமியுங்கள்", "guide/img/ta-IN/07_export.jpg"]], "rtl": false}, "si-LK": {"name": "සිංහල", "sel": "භාෂාව", "guide": "Dokebising භාවිත මාර්ගෝපදේශය", "privacy": "පුද්ගලිකත්ව ප්‍රතිපත්තිය", "title": "Dokebising: AI හඬ ඉවත් කිරීම", "short": "ගීතවලින් AI මගින් දුරකථනයේම ගායන හඬ ඉවත් කරන්න. ගායනා කර, පටිගත කර, ලකුණු ගන්න.", "feats": [["ඕනෑම ගීතයකින් හඬ ඉවත් කරන්න", "guide/img/si-LK/04_play.jpg"], ["ගී පද බලමින් ගායනා කරන්න", "guide/img/si-LK/05_playing.jpg"], ["දුරකථනයේම AI, උඩුගත කිරීමක් නැත", "guide/img/si-LK/02_allsongs.jpg"], ["පටිගත කර සුරකින්න", "guide/img/si-LK/07_export.jpg"]], "rtl": false}, "el-GR": {"name": "Ελληνικά", "sel": "Γλώσσα", "guide": "Οδηγός χρήσης Dokebising", "privacy": "Πολιτική απορρήτου", "title": "Dokebising: Αφαίρεση φωνής AI", "short": "Βγάλε τη φωνή από τραγούδια με AI στο κινητό. Τραγούδα, ηχογράφησε, πάρε βαθμό.", "feats": [["Αφαίρεσε τη φωνή από κάθε τραγούδι", "guide/img/el-GR/04_play.jpg"], ["Τραγούδα με τους στίχους", "guide/img/el-GR/05_playing.jpg"], ["AI στο κινητό, χωρίς ανέβασμα", "guide/img/el-GR/02_allsongs.jpg"], ["Ηχογράφησε και αποθήκευσε", "guide/img/el-GR/07_export.jpg"]], "rtl": false}, "kk": {"name": "Қазақ тілі", "sel": "Тіл", "guide": "Dokebising нұсқаулығы", "privacy": "Құпиялық саясаты", "title": "Dokebising: ЖИ дауысты өшіру", "short": "Әндегі вокалды телефонда ЖИ арқылы өшіріңіз. Ән айтыңыз, жазыңыз, ұпай алыңыз.", "feats": [["Кез келген әннен вокалды өшіріңіз", "guide/img/kk/04_play.jpg"], ["Мәтінге қарап ән айтыңыз", "guide/img/kk/05_playing.jpg"], ["Телефондағы ЖИ, жүктеусіз", "guide/img/kk/02_allsongs.jpg"], ["Жазып алып, сақтаңыз", "guide/img/kk/07_export.jpg"]], "rtl": false}, "mn-MN": {"name": "Монгол", "sel": "Хэл", "guide": "Dokebising хэрэглэх заавар", "privacy": "Нууцлалын бодлого", "title": "Dokebising: AI хоолой арилгагч", "short": "Дуунаас AI-аар утсан дээрээ дуучны хоолойг арилга. Дуул, бичлэг хий, оноо ав.", "feats": [["Ямар ч дуунаас хоолойг арилга", "guide/img/mn-MN/04_play.jpg"], ["Дууны үгийг харж дагаж дуул", "guide/img/mn-MN/05_playing.jpg"], ["Утсан дээрх AI, байршуулалтгүй", "guide/img/mn-MN/02_allsongs.jpg"], ["Бичиж аваад хадгал", "guide/img/mn-MN/07_export.jpg"]], "rtl": false}}, ORDER=["ko-KR", "en-US", "ja-JP", "zh-CN", "zh-TW", "es-ES", "pt-BR", "pt-PT", "fr-FR", "de-DE", "it-IT", "nl-NL", "ru-RU", "id", "ms", "ms-MY", "fil", "vi", "th", "tr-TR", "ar", "fa", "hi-IN", "ne-NP", "ta-IN", "si-LK", "el-GR", "kk", "mn-MN"];
+const PLAY="https://play.google.com/store/apps/details?id=com.dokebimaster.dokebising";
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const sel=document.getElementById('lang');
+ORDER.forEach(L=>{const o=document.createElement('option');o.value=L;o.textContent=DATA[L].name;sel.appendChild(o)});
+function pickLang(){
+ const q=new URLSearchParams(location.search).get('lang'); if(q&&DATA[q])return q;
+ try{const s=localStorage.getItem('dk_lang'); if(s&&DATA[s])return s}catch(e){}
+ for(const n of (navigator.languages||[navigator.language])){
+  if(!n)continue; if(DATA[n])return n;
+  const b=n.split('-')[0].toLowerCase(), hit=ORDER.find(L=>L.split('-')[0].toLowerCase()===b); if(hit)return hit;
+ }
+ return 'en-US';
+}
+function render(L){
+ const d=DATA[L], hl=L.split('-')[0];
+ document.documentElement.lang=L; document.documentElement.dir=d.rtl?'rtl':'ltr';
+ document.title=d.title; sel.value=L;
+ document.getElementById('langLabel').textContent=d.sel;
+ const i=d.title.search(/[:：]/);
+ document.getElementById('title').innerHTML=i>0?`<b>${esc(d.title.slice(0,i))}</b><br>${esc(d.title.slice(i+1).trim())}`:esc(d.title);
+ document.getElementById('short').textContent=d.short;
+ document.getElementById('guideTxt').textContent=d.guide;
+ document.getElementById('guideBtn').href='guide/?lang='+L;
+ document.getElementById('playBtn').href=PLAY+'&hl='+(L==='zh-TW'?'zh-TW':L==='pt-PT'?'pt-PT':hl);
+ document.getElementById('feats').innerHTML=d.feats.map(([c,src])=>`<div class="feat"><h3>${esc(c)}</h3><img loading="lazy" src="${src}" alt=""></div>`).join('');
+ document.getElementById('footer').innerHTML=`<a href="guide/?lang=${L}">${esc(d.guide)}</a>·<a href="https://privacy.dokebising.dokebimaster.com" target="_blank" rel="noopener">${esc(d.privacy)}</a>·<a href="mailto:master@dokebimaster.com">master@dokebimaster.com</a><div style="margin-top:8px">© Dokebising</div>`;
+}
+sel.addEventListener('change',()=>{const L=sel.value;try{localStorage.setItem('dk_lang',L)}catch(e){}
+ const u=new URL(location);u.searchParams.set('lang',L);history.replaceState(null,'',u);render(L)});
+render(pickLang());
+</script>
 </body>
 </html>
